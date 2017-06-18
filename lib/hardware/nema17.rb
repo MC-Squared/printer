@@ -1,6 +1,6 @@
 class Nema17 < SolidRuby::Assembly
   WIDTH = 43
-  HEIGHT = 60
+  HEIGHT = 40
 
   def initialize()
     @x = WIDTH
@@ -12,5 +12,9 @@ class Nema17 < SolidRuby::Assembly
 
   def part(show)
     cube(@x, @y, @z).color(@color)
+  end
+
+  def description
+    "Nema17 Motor"
   end
 end

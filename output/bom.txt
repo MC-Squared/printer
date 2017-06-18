@@ -1,3 +1,7 @@
+1 x 2040 Extrusion, Length: 0
 1 x No description set for Class PrinterAssembly
-2 x M4x40 Bolt, DIN 912, steel 8.8 zinc plated
-2 x M4 Nut, DIN 934, 8.8 zinc plated
+4 x 2040 Extrusion, Length: 700.0
+4 x 2040 Extrusion, Length: 580
+4 x 2040 Extrusion, Length: 610
+2 x 2040 Extrusion, Length: 650
+2 x 2040 Extrusion, Length: 540.0

@@ -16,21 +16,21 @@ class TestCube < SolidRuby::Printed
     # We start with a cube and center it in x and y direction. The cube starts at z = 0 with this.
     res = cube(@x, @y, @z).center_xy
 
-    # We want a bolt to go through it. It will be facing upwards however, so we will need to mirror it.
-    # Also translating it to twice the height, as we want to stack two of these cubes together in the assembly.
-    bolt = Bolt.new(4, 40).mirror(z: 1).translate(z: @z * 2)
-    @hardware << bolt
-
-    # We also want a nut. And since the printing direction is from the bottom, we decide to add support to it.
-    nut = Nut.new(4, support: true, support_layer_height: 0.3)
-    @hardware << nut
-
-    # subtracting the @hardware array will call the .output method on each hardware item automatically
-    res -= @hardware
-
-    # colorize is a convenience thing to colorize your part differently in assemblies.
-    # You can specify @color in initialize (as default color), or set a different color in the assembly this way.
-    res = colorize(res)
+    # # We want a bolt to go through it. It will be facing upwards however, so we will need to mirror it.
+    # # Also translating it to twice the height, as we want to stack two of these cubes together in the assembly.
+    # bolt = Bolt.new(4, 40).mirror(z: 1).translate(z: @z * 2)
+    # @hardware << bolt
+    #
+    # # We also want a nut. And since the printing direction is from the bottom, we decide to add support to it.
+    # nut = Nut.new(4, support: true, support_layer_height: 0.3)
+    # @hardware << nut
+    #
+    # # subtracting the @hardware array will call the .output method on each hardware item automatically
+    # res -= @hardware
+    #
+    # # colorize is a convenience thing to colorize your part differently in assemblies.
+    # # You can specify @color in initialize (as default color), or set a different color in the assembly this way.
+    # res = colorize(res)
 
     # Note: Make sure you do this before adding parts (i.e. hardware) that have their own color and that
     #				you do not want to colorize.
